@@ -1,0 +1,19 @@
+FROM ubuntu:14.04
+
+RUN apt-get -y install software-properties-common
+RUN add-apt-repository -y ppa:webupd8team/java
+RUN apt-get -y update
+
+# Accept the license
+RUN echo "oracle-java7-installer shared/accepted-oracle-license-v1-1 boolean true" | debconf-set-selections
+RUN apt-get install -y oracle-java7-installer
+
+RUN apt-get -y install tomcat7
+RUN echo "JAVA_HOME=/usr/lib/jvm/java-7-oracle" >> /etc/default/tomcat7
+
+WORKDIR /usr/share/tomcat7/bin
+RUN chmod +x /*.sh
+
+EXPOSE 8080
+#CMD service tomcat7 start && tail -f /var/lib/tomcat7/logs/catalina.out
+CMD ["bash"]

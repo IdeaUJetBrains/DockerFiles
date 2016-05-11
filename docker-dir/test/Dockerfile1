@@ -1,0 +1,55 @@
+FROM ubuntu:14.04
+RUN apt-get update && apt-get -y upgrade
+
+RUN apt-get -y install software-properties-common
+RUN add-apt-repository ppa:webupd8team/java
+RUN apt-get -y update
+
+# Accept the license
+RUN echo "oracle-java7-installer shared/accepted-oracle-license-v1-1 boolean true" | debconf-set-selections
+RUN apt-get install -y oracle-java7-installer
+# Define commonly used JAVA_HOME variable
+ENV JAVA_HOME /usr/lib/jvm/java-7-oracle
+ENV PATH $JAVA_HOME/bin:$PATH
+
+
+#ENV CATALINA_HOME /usr/share/tomcat7
+#ENV PATH $CATALINA_HOME/bin:$PATH
+#RUN mkdir -p "$CATALINA_HOME"
+#WORKDIR $CATALINA_HOME
+
+#ENV TOMCAT_MAJOR_VERSION 4
+#ENV TOMCAT_MINOR_VERSION 4.1.40
+
+
+# INSTALL TOMCAT
+#RUN wget -q https://archive.apache.org/dist/tomcat/tomcat-${TOMCAT_MAJOR_VERSION}/v${TOMCAT_MINOR_VERSION}/bin/apache-tomcat-${TOMCAT_MINOR_VERSION}.tar.gz && \
+#    tar zxf apache-tomcat-*.tar.gz && \
+#    rm apache-tomcat-*.tar.gz && \
+#    mv apache-tomcat* tomcat
+
+
+
+#ENV  TOMCAT_VERSION=8.0.30
+#ENV  TOMCAT_DIR /opt/apache-tomcat
+#ENV TOMCAT_NAME=apache-tomcat-8.0.30
+#ENV TOMCAT_FILENAME=apache-tomcat-8.0.30.tar.gz
+
+# Here comes the tomcat installation
+RUN apt-get -y install tomcat7 tomcat7-admin tomcat7-examples #tomcat7-root
+RUN echo "JAVA_HOME=/usr/lib/jvm/java-7-oracle" >> /etc/default/tomcat7
+#RUN echo "JAVA_HOME=/usr/lib/jvm/java-7-oracle" >> /etc/default/tomcat7
+
+
+# Expose the default tomcat port
+EXPOSE 8080
+
+ENV CATALINA_HOME /usr/share/tomcat7
+ENV PATH $CATALINA_HOME/bin:$PATH
+WORKDIR $CATALINA_HOME
+
+# Start the tomcat (and leave it hanging)
+#CMD service tomcat7 start && tail -f /var/lib/tomcat/logs/catalina.out
+#CMD ["catalina.sh", "run"]
+CMD ["bash"]
+#CMD ["run", "tail -f /var/lib/tomcat/logs/catalina.out"]
