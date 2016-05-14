@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="2736867653">
+  <component name="DataSourceManagerImpl" format="xml" hash="1816305436">
     <data-source source="LOCAL" name="MySQL - DOCKERDB@192.168.99.100" uuid="f6c95c70-620e-43fc-b0ab-8d8672dc84f0">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>

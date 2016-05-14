@@ -1,7 +1,6 @@
 {
   "AttachStdin": true,
   "OpenStdin": true,
-  "Env" : [ "MYSQL_ROOT_PASSWORD=root", "MYSQL_DATABASE=DOCKERDB" ],
   "Image" : "",
   "Volumes" : { },
   "ExposedPorts" : { },
