@@ -121,26 +121,6 @@ CREATE TABLE LSN_Types_table
 
 );
 
--- These types are from site
-/*CREATE TABLE Pseudo_Types_table
-(
-    V_ANY ANY,
-    V_anyarray  anyarray,
-    V_anyelement  anyelement,
-    V_anynonarray  anynonarray,
-    V_anyenum  anyenum,
-    V_anyrange  anyrange,
-    V_cstring cstring,
-    V_internal  internal,
-    V_language_handler  language_handler,
-    V_fdw_handler  fdw_handler,
-    V_record  record,
-    V_trigger  trigger,
-    V_event_trigger  event_trigger,
-    V_void  void,
-    V_opaque  opaque
-
-);*/
 
 
 CREATE TYPE new_type AS (
