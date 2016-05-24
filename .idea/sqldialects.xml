@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/docker-dir/db/_dialects/DB2.ddl" dialect="DB2" />
+    <file url="file://$PROJECT_DIR$/docker-dir/db/_dialects/Derby.ddl" dialect="Derby" />
+    <file url="file://$PROJECT_DIR$/docker-dir/db/_dialects/H2.ddl" dialect="H2" />
+    <file url="file://$PROJECT_DIR$/docker-dir/db/_dialects/HSQLDB.ddl" dialect="HSQLDB" />
+    <file url="file://$PROJECT_DIR$/docker-dir/db/_dialects/MySQL.ddl" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/docker-dir/db/_dialects/PostgaSQL.ddl" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/docker-dir/db/_dialects/SQLServer2008.ddl" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/docker-dir/db/_dialects/Sqlite.ddl" dialect="SQLite" />
+    <file url="file://$PROJECT_DIR$/docker-dir/db/_dialects/Sybase.ddl" dialect="Sybase" />
+    <file url="file://$PROJECT_DIR$/docker-dir/db/_dialects/oracle.ddl" dialect="Oracle" />
+    <file url="file://$PROJECT_DIR$/docker-dir/db/_dialects/oracleAll.ddl" dialect="Oracle" />
+    <file url="file://$PROJECT_DIR$/docker-dir/db/_dialects/oraclePlusSQL.ddl" dialect="OracleSqlPlus" />
+  </component>
+</project>

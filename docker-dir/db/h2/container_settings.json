@@ -1,0 +1,16 @@
+{
+  "AttachStdin": true,
+  "OpenStdin": true,
+  "Image" : "",
+  "Volumes" : { },
+  "ExposedPorts" : { },
+  "HostConfig": {
+    "Binds" : {},
+    "PortBindings":{
+      "1521/tcp": [{ "HostIp": "192.168.99.100", "HostPort": "11521" }],
+      "81/tcp": [{ "HostIp": "192.168.99.100", "HostPort": "181" }]
+
+    }
+  },
+  "_comment" : ""
+}

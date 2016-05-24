@@ -1,0 +1,50 @@
+https://hub.docker.com/_/postgres/
+
+CONNECTION: jdbc:mysql://192.168.99.100:13306/DOCKERDB
+
+default port = 5432.
+
+bash:
+psql --username root --dbname DOCKERDB
+
+
+===========================================================
+Commands:
+===========================================================
+
+\conninfo
+\list   - show databases
+\dt *.*   -   show all tables   \dt -show tables
+\c DOCKERDB  - connect to the database
+\c DOCKERDB \dt  - connect and show
+
+CREATE USER testuser WITH PASSWORD 'password';
+CREATE DATABASE testdb OWNER testuser;
+
+
+
+
+
+===========================================================
+===========================================================
+
+===================
+CREATE TABLE PUBLIC.TEST (
+	equip_id serial PRIMARY KEY,
+	type varchar (50) NOT NULL,
+	color varchar (25) NOT NULL,
+	location varchar(25) check (location in ('north', 'south', 'west', 'east', 'northeast', 'southeast', 'southwest', 'northwest')),
+	install_date date
+);
+
+
+===================
+DROP TABLE PUBLIC.TEST;
+===================
+
+CREATE TABLE PUBLIC.TBL_BANK_ACCOUNT
+(
+  ACCOUNTNUMBER VARCHAR(255) PRIMARY KEY,
+  AMOUNT DOUBLE
+);
+===================

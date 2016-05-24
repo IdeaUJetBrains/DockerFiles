@@ -1,0 +1,53 @@
+/*https://db.apache.org/derby/docs/10.12/ref/  data types */
+CREATE TABLE Numeric_Types_table
+(
+    V_SMALLINT SMALLINT,
+    V_INTEGER INTEGER,
+    V_BIGINT BIGINT,
+    V_REAL REAL,
+    V_DOUBLE DOUBLE,
+    V_DOUBLE_PRECISION DOUBLE PRECISION,
+    V_FLOAT FLOAT,
+    V_DECIMAL DECIMAL,
+    V_NUMERIC NUMERIC
+);
+
+CREATE TABLE Date_Time_Types_table
+(
+  V_TIME TIME,
+  V_DATE DATE,
+  V_TIMESTAMP TIMESTAMP
+);
+
+CREATE TABLE BOOLEAN_BLOB_CLOB_Types_table
+(
+  V_BOOLEAN BOOLEAN,
+  V_BLOB BLOB,
+  V_CLOB CLOB
+);
+
+CREATE TABLE Char_Types_table
+(
+  V_LONGVARBINARY LONGVARBINARY,
+  V_LONGVARCHAR LONGVARCHAR,
+  V_CHAR CHAR,
+  V_VARCHAR VARCHAR(255),
+  V_CHAR_FOR_BIT_DATA CHAR(2) FOR BIT DATA
+);
+
+CREATE TABLE Xml_Types_table
+(
+   V_XML XML
+);
+
+
+
+CREATE TYPE price
+EXTERNAL NAME 'com.example.types.Price'
+LANGUAGE JAVA;
+
+CREATE TABLE user_defined_type_table
+(
+  orderID INT GENERATED ALWAYS AS IDENTITY,
+  totalPrice price
+);

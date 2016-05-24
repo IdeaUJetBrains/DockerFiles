@@ -1,0 +1,55 @@
+https://github.com/wnameless/docker-oracle-xe-11g
+
+1. Starting the SQL Command Line from a Terminal Session or Command Window:
+sqlplus /nolog
+SQL> CONNECT system/oracle
+...
+SQL> EXIT
+
+2.
+CONNECTION: jdbc:mysql://192.168.99.100:13306/DOCKERDB
+
+
+3.
+
+SELECT NAME FROM v$database;
+
+select USERNAME, DEFAULT_TABLESPACE from DBA_USERS;
+SQL> SELECT TABLESPACE_NAME FROM USER_TABLESPACES;
+
+==============
+default port = .
+
+bash:
+
+DATA:
+hostname: localhost
+port: 49161
+sid: xe
+username: system
+password: oracle
+
+
+===========================================================
+Commands:
+===========================================================
+
+
+
+
+
+
+===========================================================
+===========================================================
+
+
+===================
+DROP TABLE PUBLIC.TEST;
+===================
+
+CREATE TABLE PUBLIC.TBL_BANK_ACCOUNT
+(
+  ACCOUNTNUMBER VARCHAR(255) PRIMARY KEY,
+  AMOUNT DOUBLE
+);
+===================

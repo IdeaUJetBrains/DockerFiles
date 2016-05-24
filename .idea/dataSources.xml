@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="1816305436">
+  <component name="DataSourceManagerImpl" format="xml" hash="2683724060">
     <data-source source="LOCAL" name="MySQL - DOCKERDB@192.168.99.100" uuid="f6c95c70-620e-43fc-b0ab-8d8672dc84f0">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
@@ -27,6 +27,59 @@
         <property name="characterEncoding" value="utf8" />
         <property name="characterSetResults" value="utf8" />
         <property name="yearIsDateType" value="false" />
+      </driver-properties>
+    </data-source>
+    <data-source source="LOCAL" name="PostgreSQL - DOCKERDB@192.168.99.100" uuid="c3dbca63-2c57-427d-8076-27ea7a0e87e3">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://192.168.99.100:15432/DOCKERDB</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="PostgreSQL - DOCKERDB@192.168.99.100 [2]" uuid="db44bdef-5748-4a5e-b112-f3b64e8b0b53">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://192.168.99.100:15433/DOCKERDB</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="PostgreSQL - DOCKERDB@192.168.99.100 [3]" uuid="6dfec672-5fc1-4f94-9923-b840aa83054e">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://192.168.99.100:15434/DOCKERDB</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="PostgreSQL - DOCKERDB@192.168.99.100 [4]" uuid="2b562c21-6585-4059-a77b-9cbb0959aa77">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://192.168.99.100:15435/DOCKERDB</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="PostgreSQL - DOCKERDB@192.168.99.100 [5]" uuid="3e801ab6-2935-4ea1-965b-cb8244689ceb">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://192.168.99.100:15436/DOCKERDB</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Oracle - @192.168.99.100" uuid="cce53db5-679d-4fbb-85f0-bebc9443ab1c">
+      <driver-ref>oracle</driver-ref>
+      <auto-commit>false</auto-commit>
+      <jdbc-driver>oracle.jdbc.OracleDriver</jdbc-driver>
+      <jdbc-url>jdbc:oracle:thin:@//192.168.99.100:49161/XE</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="H2 - default@192.168.99.100" uuid="983d0faa-7fde-4acb-a330-9cd070e2b122">
+      <driver-ref>h2.unified</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.h2.Driver</jdbc-driver>
+      <jdbc-url>jdbc:h2:tcp://192.168.99.100:11521/default</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="DB2 (JTOpen) - DB2_INST@192.168.99.100" uuid="758804e1-02c6-4a3a-815a-b562f3791a84">
+      <driver-ref>db2.jtopen</driver-ref>
+      <jdbc-driver>com.ibm.as400.access.AS400JDBCDriver</jdbc-driver>
+      <jdbc-url>jdbc:as400://192.168.99.100:50000/DB2_INST</jdbc-url>
+      <explain-plan-config>
+        <provider>com.intellij.database.plan.ExplainPlanProvider.NullExplainPlanProvider</provider>
+      </explain-plan-config>
+      <driver-properties>
+        <property name="prompt" value="false" />
       </driver-properties>
     </data-source>
   </component>
