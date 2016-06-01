@@ -1,5 +1,12 @@
 HOW TO CONNECT TO DOCKER DB SERVER
 
+CONNECT DATA:
+jdbc:postgresql://192.168.99.100:15432/DOCKERDB
+user=root
+password - empty
+Note: the port value (here 15432) see in the corresponding container-settings file
+
+HOW TO:
 1. Install docker
 https://docs.docker.com/engine/installation/
 https://docs.docker.com/engine/userguide/
@@ -33,7 +40,7 @@ Results are in the Docker View
 
 7. Create connection to the database in the Database View:
 - go to the Database View, add new Data Source
-- add URL:  jdbc:mysql://192.168.99.100:15432/DOCKERDB
+- add URL:  jdbc:postgresql://192.168.99.100:15432/DOCKERDB
   NB: port value is taken from container_settings.json, "HostPort"
 - add user=root, password - empty
 Connect.
