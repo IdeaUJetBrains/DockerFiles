@@ -68,8 +68,6 @@ RUN set -x \
 	&& rm -rf "$nativeBuildDir" \
 	&& rm bin/tomcat-native.tar.gz
 
-# TODO find a simple hacky way to verify Tomcat Native is working properly
-# (the way we use in 7+ doesn't work here because we have no "configtest")
 
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
