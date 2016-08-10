@@ -1,0 +1,30 @@
+{
+  "_comment": "FOR DETAILED FORMAT LOOK AT https://docs.docker.com/reference/api/docker_remote_api_v1.16/#create-a-container",
+  "AttachStdin": true,
+  "OpenStdin": true,
+  "HostConfig": {
+    "PortBindings" : {
+      "5556/tcp" : [ {
+        "HostIp" : "192.168.99.100",
+        "HostPort" : "15556"
+      } ],
+      "7001/tcp" : [ {
+        "HostIp" : "192.168.99.100",
+        "HostPort" : "17001"
+      } ],
+      "5001/tcp" : [ {
+        "HostIp" : "192.168.99.100",
+        "HostPort" : "15001"
+      } ],
+      "5000/tcp" : [ {
+        "HostIp" : "192.168.99.100",
+        "HostPort" : "15000"
+      } ],
+      "8001/tcp": [{
+        "HostIp": "192.168.99.100",
+        "HostPort": "18001"
+      }]
+    }
+
+  }
+}

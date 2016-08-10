@@ -1,11 +1,7 @@
 {
   "AttachStdin": true,
   "OpenStdin": true,
-  "Image" : "",
-  "Volumes" : { },
-  "ExposedPorts" : { },
   "HostConfig": {
     "PortBindings":{ "3306/tcp": [{ "HostIp": "192.168.99.100", "HostPort": "13306" }] }
-  },
-  "_comment" : ""
+  }
 }

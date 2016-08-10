@@ -32,7 +32,7 @@ RUN apt-get update && apt-get install -y libaio1 pwgen && rm -rf /var/lib/apt/li
 RUN apt-get update && apt-get install -y dos2unix
 
 ENV MYSQL_MAJOR 5.5
-ENV MYSQL_VERSION 5.5.49
+ENV MYSQL_VERSION 5.5.51
 
 # note: we're pulling the *.asc file from mysql.he.net instead of dev.mysql.com because the official mirror 404s that file for whatever reason - maybe it's at a different path?
 RUN apt-get update && apt-get install -y wget --no-install-recommends && rm -rf /var/lib/apt/lists/* \
@@ -79,14 +79,14 @@ ENV MYSQL_USER user
 ENV MYSQL_PASSWORD user
 ENV MYSQL_ALLOW_EMPTY_PASSWORD yes
 
-ENV DIR_ENTRYPOINT /usr/local/bin/
+ENV DIR_ENTRYPOINT usr/local/bin/
 
-ADD docker-entrypoint.sh $DIR_ENTRYPOINT
+ADD docker-entrypoint.sh /$DIR_ENTRYPOINT
 RUN ln -s $DIR_ENTRYPOINT/docker-entrypoint.sh /entrypoint.sh # backwards compat
 #ENTRYPOINT ["dos2unix","/usr/local/bin/docker-entrypoint.sh","/usr/local/bin/docker-entrypoint.sh"]
-RUN dos2unix  $DIR_ENTRYPOINT/docker-entrypoint.sh $DIR_ENTRYPOINT/docker-entrypoint.sh
+RUN dos2unix  /$DIR_ENTRYPOINT/docker-entrypoint.sh /$DIR_ENTRYPOINT/docker-entrypoint.sh
 
-ENTRYPOINT ["usr/local/bin/docker-entrypoint.sh"]
+ENTRYPOINT ["docker-entrypoint.sh"]
 
 EXPOSE 3306
 CMD ["mysqld"]

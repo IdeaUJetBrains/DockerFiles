@@ -3,8 +3,9 @@ https://hub.docker.com/_/mysql/
 bash:
 mysql -u root -p
 Password=root
+mysql> exit
 
-
+MySQL version: mysql -V
 ===========================================================
 Commands:
 ===========================================================

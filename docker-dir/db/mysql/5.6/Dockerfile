@@ -32,7 +32,7 @@ RUN apt-get update && apt-get install -y perl pwgen --no-install-recommends && r
 RUN apt-key adv --keyserver ha.pool.sks-keyservers.net --recv-keys A4A9406876FCBD3C456770C88C718D3B5072E1F5
 
 ENV MYSQL_MAJOR 5.6
-ENV MYSQL_VERSION 5.6.30-1debian8
+ENV MYSQL_VERSION 5.6.32-1debian8
 
 RUN echo "deb http://repo.mysql.com/apt/debian/ jessie mysql-${MYSQL_MAJOR}" > /etc/apt/sources.list.d/mysql.list
 
@@ -64,14 +64,14 @@ ENV MYSQL_USER user
 ENV MYSQL_PASSWORD user
 ENV MYSQL_ALLOW_EMPTY_PASSWORD yes
 
-ENV DIR_ENTRYPOINT /usr/local/bin/
+ENV DIR_ENTRYPOINT usr/local/bin/
 
-ADD docker-entrypoint.sh $DIR_ENTRYPOINT
+ADD docker-entrypoint.sh /$DIR_ENTRYPOINT
 RUN ln -s $DIR_ENTRYPOINT/docker-entrypoint.sh /entrypoint.sh # backwards compat
 #ENTRYPOINT ["dos2unix","/usr/local/bin/docker-entrypoint.sh","/usr/local/bin/docker-entrypoint.sh"]
-RUN dos2unix  $DIR_ENTRYPOINT/docker-entrypoint.sh $DIR_ENTRYPOINT/docker-entrypoint.sh
+RUN dos2unix  /$DIR_ENTRYPOINT/docker-entrypoint.sh /$DIR_ENTRYPOINT/docker-entrypoint.sh
 
-ENTRYPOINT ["usr/local/bin/docker-entrypoint.sh"]
+ENTRYPOINT ["docker-entrypoint.sh"]
 
 EXPOSE 3306
 CMD ["mysqld"]
