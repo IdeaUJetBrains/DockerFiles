@@ -9,6 +9,6 @@
 
 FROM expertsystems/resin
 EXPOSE 8080
-ADD HelloDocker.war /var/resin/webapps
+ADD helloworld.war /var/resin/webapps
 
 

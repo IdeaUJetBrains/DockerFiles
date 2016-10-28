@@ -1,0 +1,22 @@
+Connection to the database in the container:
+1. java org.apache.derby.tools.ij
+2. connect 'jdbc:derby:DOCKERDB';
+or
+1. java -jar $DERBY_HOME/lib/derbyrun.jar ij
+2. CONNECT 'jdbc:derby:dbs/DOCKERDB;create=true';
+or
+java org.apache.derby.tools.ij jdbc:derby:anyfolder/newdbname;create=true
+
+================================================
+How to get INFO about Derby:
+java org.apache.derby.tools.sysinfo
+
+================================================
+All new databases are created in the container folder:
+/dbs
+
+Create a new database "TEST" via URL in Database view:
+jdbc:derby://172.27.121.11:1527/TEST;create=true
+================================================
+
+Create db data, see: dockerdb_schema.sql

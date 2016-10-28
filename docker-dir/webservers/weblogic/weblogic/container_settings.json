@@ -1,0 +1,7 @@
+{
+  "AttachStdin": true,
+  "OpenStdin": true,
+  "HostConfig": {
+    "PortBindings":{ "8001/tcp": [{ "HostIp": "192.168.99.100", "HostPort": "18001" }] }
+  }
+}

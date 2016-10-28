@@ -30,7 +30,7 @@ RUN apt-key adv --keyserver ha.pool.sks-keyservers.net --recv-keys B97B0AFCAA1A4
 RUN apt-get update && apt-get install -y dos2unix
 
 ENV PG_MAJOR 9.6
-ENV PG_VERSION 9.6~beta1-2.pgdg80+1
+ENV PG_VERSION 9.6~beta3-1.pgdg80+1
 
 RUN echo 'deb http://apt.postgresql.org/pub/repos/apt/ jessie-pgdg main' $PG_MAJOR > /etc/apt/sources.list.d/pgdg.list
 

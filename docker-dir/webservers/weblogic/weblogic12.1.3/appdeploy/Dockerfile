@@ -28,4 +28,4 @@ FROM opavlova/weblogic:12.1.3
 
 ADD HelloDocker.war $DOMAIN_HOME/autodeploy/
 
-CMD ["startWebLogic.sh"]
+#CMD ["startWebLogic.sh"]

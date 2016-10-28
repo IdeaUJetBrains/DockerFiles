@@ -18,7 +18,7 @@ mysql -u user -p DOCKERDB      // starts from this DB
 
 SELECT User,Host FROM mysql.user;
 SHOW GLOBAL STATUS;
-
+INSERT INTO table_name ( field_name1, field_name2 ) VALUES("1","111");
 
 ===========================================================
 RIGHTS
@@ -68,3 +68,17 @@ CREATE TABLE PUBLIC.TBL_BANK_ACCOUNT
   ACCOUNTNUMBER VARCHAR(255) PRIMARY KEY,
   AMOUNT DOUBLE
 );
+========================
+CREATE TABLE PUBLIC.ENTITYBUS
+(
+    EID INT PRIMARY KEY,
+    ENUMBER VARCHAR(255)
+);
+
+CREATE TABLE PUBLIC.BUS
+(
+    ID INT PRIMARY KEY,
+    NUMBER VARCHAR(255)
+);
+INSERT INTO ENTITYBUS ( EID, ENUMBER ) VALUES("1","111");
+INSERT INTO ENTITYBUS ( EID, ENUMBER ) VALUES("2","222");

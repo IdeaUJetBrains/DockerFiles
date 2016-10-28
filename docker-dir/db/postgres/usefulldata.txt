@@ -1,8 +1,6 @@
-https://hub.docker.com/_/postgres/
-
 CONNECTION: jdbc:mysql://192.168.99.100:13306/DOCKERDB
 
-default port = 5432.
+default port = 5432
 
 bash:
 psql --username root --dbname DOCKERDB

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="2683724060">
-    <data-source source="LOCAL" name="MySQL - DOCKERDB@192.168.99.100" uuid="f6c95c70-620e-43fc-b0ab-8d8672dc84f0">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="MySQL - DOCKERDB@172.27.121.104" uuid="f6c95c70-620e-43fc-b0ab-8d8672dc84f0">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://192.168.99.100:13306/DOCKERDB</jdbc-url>
+      <jdbc-url>jdbc:mysql://172.27.121.104:13308/DOCKERDB</jdbc-url>
       <driver-properties>
         <property name="autoReconnect" value="true" />
         <property name="zeroDateTimeBehavior" value="convertToNull" />
@@ -15,7 +15,7 @@
         <property name="yearIsDateType" value="false" />
       </driver-properties>
     </data-source>
-    <data-source source="LOCAL" name="MySQL1" uuid="aa124ce3-f14a-4649-970e-a58ce199218f">
+    <data-source source="LOCAL" name="MySQL - qa-vmws-xp" uuid="aa124ce3-f14a-4649-970e-a58ce199218f">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
@@ -34,30 +34,6 @@
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://192.168.99.100:15432/DOCKERDB</jdbc-url>
-    </data-source>
-    <data-source source="LOCAL" name="PostgreSQL - DOCKERDB@192.168.99.100 [2]" uuid="db44bdef-5748-4a5e-b112-f3b64e8b0b53">
-      <driver-ref>postgresql</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://192.168.99.100:15433/DOCKERDB</jdbc-url>
-    </data-source>
-    <data-source source="LOCAL" name="PostgreSQL - DOCKERDB@192.168.99.100 [3]" uuid="6dfec672-5fc1-4f94-9923-b840aa83054e">
-      <driver-ref>postgresql</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://192.168.99.100:15434/DOCKERDB</jdbc-url>
-    </data-source>
-    <data-source source="LOCAL" name="PostgreSQL - DOCKERDB@192.168.99.100 [4]" uuid="2b562c21-6585-4059-a77b-9cbb0959aa77">
-      <driver-ref>postgresql</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://192.168.99.100:15435/DOCKERDB</jdbc-url>
-    </data-source>
-    <data-source source="LOCAL" name="PostgreSQL - DOCKERDB@192.168.99.100 [5]" uuid="3e801ab6-2935-4ea1-965b-cb8244689ceb">
-      <driver-ref>postgresql</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://192.168.99.100:15436/DOCKERDB</jdbc-url>
     </data-source>
     <data-source source="LOCAL" name="Oracle - @192.168.99.100" uuid="cce53db5-679d-4fbb-85f0-bebc9443ab1c">
       <driver-ref>oracle</driver-ref>
@@ -81,6 +57,34 @@
       <driver-properties>
         <property name="prompt" value="false" />
       </driver-properties>
+    </data-source>
+    <data-source source="LOCAL" name="MySQL - localhost:3306 DB" uuid="16196a1b-1783-4546-a6c5-ff71071b0695">
+      <driver-ref>mysql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/DB</jdbc-url>
+      <driver-properties>
+        <property name="autoReconnect" value="true" />
+        <property name="zeroDateTimeBehavior" value="convertToNull" />
+        <property name="tinyInt1isBit" value="false" />
+        <property name="characterEncoding" value="utf8" />
+        <property name="characterSetResults" value="utf8" />
+        <property name="yearIsDateType" value="false" />
+      </driver-properties>
+    </data-source>
+    <data-source source="LOCAL" name="Derby (Remote) - DOCKERDB@172.27.121.11" uuid="f2cc7a34-8b1a-4ce4-b533-50dab5d3de1e">
+      <driver-ref>derby.remote</driver-ref>
+      <synchronize>true</synchronize>
+      <configured-by-url>true</configured-by-url>
+      <jdbc-driver>org.apache.derby.jdbc.ClientDriver</jdbc-driver>
+      <jdbc-url>jdbc:derby://172.27.121.11:1527/DOCKERDB</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Derby (Remote) - test" uuid="48665c86-2d6a-4e46-a20c-108c860820bb">
+      <driver-ref>derby.remote</driver-ref>
+      <synchronize>true</synchronize>
+      <configured-by-url>true</configured-by-url>
+      <jdbc-driver>org.apache.derby.jdbc.ClientDriver</jdbc-driver>
+      <jdbc-url>jdbc:derby://172.27.121.104:1527/firstdb1;create=true</jdbc-url>
     </data-source>
   </component>
 </project>

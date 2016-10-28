@@ -7,8 +7,8 @@
   "HostConfig": {
     "Binds" : {},
     "PortBindings":{
-      "50000/tcp": [{ "HostIp": "192.168.99.100", "HostPort": "50000" }],
-      "81/tcp": [{ "HostIp": "192.168.99.100", "HostPort": "181" }]
+      "50000/tcp": [{ "HostIp": "0.0.0.0", "HostPort": "50000" }],
+      "81/tcp": [{ "HostIp": "0.0.0.0", "HostPort": "181" }]
 
     }
   },

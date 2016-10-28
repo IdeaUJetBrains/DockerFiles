@@ -2,14 +2,14 @@
 FROM centos:centos7
 
 # To keep the image small we download from a URL
-ENV ASE_DOWNLOADFILE http://your.fileserver.com/ASESERV1570134_0-20011142.TGZ
+ENV ASE_DOWNLOADFILE ASE_Suite.linuxamd64.tgz
 
 # Needed for ASE
 RUN yum -y install libaio glibc.i686 tar && yum -y clean all
 
-#RUN apt-get update && apt-get install -y dos2unix
+RUN yum -y update && yum -y install -y dos2unix
 ADD responsefile /tmp/responsefile
-#RUN dos2unix  /tmp/responsefile /tmp/responsefile
+RUN dos2unix  /tmp/responsefile /tmp/responsefile
 
 # This may take up to 20 minutes, since sybase-installer is very slow
 RUN cd /tmp \
@@ -31,24 +31,24 @@ RUN cd /tmp \
     && chown -R sybase:sybase /opt/sybase
 
 ADD interfaces /opt/sybase/interfaces
-
+EXPOSE 5000 5002 5003
 #create master device
-#RUN /opt/sybase/ASE-15_0/bin/dataserver \
-#        -d/opt/datadir/master.dat \
-#        -b 60M \
-#        -z 4K \
-#        -e/opt/datadir/sybase_errorlog \
-#        -c/opt/datadir/SYBASE.cfg \
-#        -M/opt/datadir/ \
-#        -sSYBASE
+RUN /opt/sybase/ASE-15_0/bin/dataserver \
+        -d/opt/datadir/master.dat \
+        -b 60M \
+        -z 4K \
+        -e/opt/datadir/sybase_errorlog \
+        -c/opt/datadir/SYBASE.cfg \
+        -M/opt/datadir/ \
+        -sSYBASE
 
-#CMD ["/opt/sybase/ASE-15_0/bin/dataserver",
-#"-d/opt/datadir/master.dat",
-#"-e/opt/datadir/sybase_errorlog",
-#"-c/opt/datadir/SYBASE.cfg",
-#"-M/opt/datadir/",
-#"-sSYBASE",
-#"while ! echo | nc -4 localhost 5000 > /dev/null 2>&1; do sleep 1; done" ]
+CMD ["/opt/sybase/ASE-15_0/bin/dataserver",
+"-d/opt/datadir/master.dat",
+"-e/opt/datadir/sybase_errorlog",
+"-c/opt/datadir/SYBASE.cfg",
+"-M/opt/datadir/",
+"-sSYBASE",
+"while ! echo | nc -4 localhost 5000 > /dev/null 2>&1; do sleep 1; done" ]
 
 
 
