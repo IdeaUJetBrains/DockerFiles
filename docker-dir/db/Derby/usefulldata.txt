@@ -20,3 +20,9 @@ jdbc:derby://172.27.121.11:1527/TEST;create=true
 ================================================
 
 Create db data, see: dockerdb_schema.sql
+
+=================================================
+Database view.
+Note: if we don't add user=DOCKERDB, password = DOCKERDB
+then the connection is Ok in the DatabaseView,
+but Hibernate/JPA consoles work only with notEmpty username and password

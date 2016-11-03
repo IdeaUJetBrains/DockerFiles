@@ -14,8 +14,8 @@ HOW TO CONNECT TO DOCKER DB SERVER
 
 CONNECT DATA:
 jdbc:derby://172.27.121.11:1527/DOCKERDB
-user=root or empty
-password - empty
+user=DOCKERDB
+password = DOCKERDB
 Note: the port value (here 1527) see in the corresponding container-settings file
 
 HOW TO:
@@ -53,6 +53,7 @@ Results are in the Docker View
 7. Create connection to the database in the Database View:
 - go to the Database View, add new Data Source
 - add URL:  jdbc:derby://172.27.121.11:1527/DOCKERDB
+- user=DOCKERDB, password = DOCKERDB
   NB: port value is taken from container_settings.json, "HostPort"
 Connect.
 
