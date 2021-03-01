@@ -1,0 +1,9 @@
+FROM openjdk:8 as base-image
+COPY . /tmp
+WORKDIR /tmp
+CMD ["java", "-jar", "JavaPassFromConsole.jar"]
+
+FROM base-image as base-image-run-jar
+CMD ["java", "-jar", "JavaPassFromConsole.jar"]
+
+
